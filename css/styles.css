@@ -12,6 +12,17 @@
   --accent-color: #ff6c00;
 }
 
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+img {
+  display: block;
+}
+
 body {
   font-family: var(--main-font);
   color: var(--text-color-light-theme);
@@ -31,9 +42,31 @@ address {
 
 button {
   cursor: pointer;
+  background-color: transparent;
 }
 
 /* ================ COMPONENTS ================ */
+.container {
+  width: 1200px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.section {
+  padding-top: 130px;
+  padding-bottom: 130px;
+}
+
+.visually-hidden {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
 
 .subtitle {
   font-weight: 600;
@@ -41,6 +74,7 @@ button {
   line-height: 1.364;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  margin-bottom: 20px;
 }
 
 .subtitle-dark-theme {
@@ -86,11 +120,15 @@ button {
   font-family: var(--main-font);
   font-weight: 600;
   font-size: 12px;
+  width: 160px;
+  min-height: 40px;
+  padding: 12px 14px;
   line-height: 1.333;
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
-  cursor: pointer;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
 }
 
 .modal-btn-light-theme {
@@ -103,6 +141,18 @@ button {
 .modal-btn:hover,
 .modal-btn:focus {
   background-color: var(--accent-color);
+}
+
+.social-links {
+  display: flex;
+}
+
+.social-links-item {
+  flex-shrink: 0;
+}
+
+.social-links-item:not(:last-child) {
+  margin-right: 40px;
 }
 
 .social-link {
@@ -120,6 +170,38 @@ button {
 /* ================ END COMPONENTS ================ */
 
 /* ========= HEADER ========= */
+.header {
+  padding-top: 32px;
+  padding-bottom: 32px;
+}
+
+.header .container {
+  display: flex;
+  align-items: center;
+}
+
+.header .address {
+  margin-left: auto;
+  margin-right: 40px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  margin-right: 71px;
+}
+
+.navigation-list {
+  display: flex;
+}
+
+.navigation-list-item:not(:last-child) {
+  margin-right: 40px;
+}
+
 .navigation-list-item-link,
 .header-tel-link {
   font-weight: 600;
@@ -137,6 +219,26 @@ button {
 /* ========= END HEADER ========= */
 
 /* ========= HERO ========= */
+.hero .container {
+  display: flex;
+}
+
+.hero .description {
+  width: 400px;
+}
+
+.hero-left-side {
+  width: 100px;
+}
+
+.hero-right-side {
+  flex-grow: 1;
+  background-color: #303030;
+  padding-top: 272px;
+  padding-left: 100px;
+  padding-bottom: 206px;
+}
+
 .hero-title {
   font-family: var(--secondary-font);
   font-weight: 700;
@@ -144,19 +246,59 @@ button {
   line-height: 1.181;
   letter-spacing: 0.05em;
   color: var(--title-dark-theme-color);
+  margin-bottom: 20px;
 }
 /* ========= END HERO ========= */
 
 /* ================ ABOUT ================ */
+.about .container {
+  display: flex;
+}
+
+.about-gallery {
+  display: flex;
+}
+
+.about-gallery-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-right-side {
+  padding-left: 64px;
+}
+
+.about-right-side .title {
+  margin-bottom: 20px;
+}
+
+.about-right-side .description {
+  margin-bottom: 20px;
+}
+
 .about-text {
   font-weight: normal;
   font-size: 14px;
   line-height: 1.857;
   letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  padding-right: 56px;
 }
 /* ================ END ABOUT ================ */
 
 /* ================ SERVICES ================ */
+.services {
+  background-color: #303030;
+}
+
+.services .title {
+  margin-bottom: 44px;
+}
+
+.services .modal-btn {
+  display: block;
+  margin: 0 auto;
+}
+
 .services-list-item-text {
   font-weight: normal;
   font-size: 18px;
@@ -164,9 +306,63 @@ button {
   letter-spacing: 0.02em;
   color: #9da4bd;
 }
+
+.services-list-wrapper {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.services-list {
+  width: 50%;
+  padding: 30px 40px;
+}
+
+.services-list-item {
+  display: flex;
+  align-items: baseline;
+}
+
+.services-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.services-list-item-underline {
+  height: 1px;
+  background-color: rgba(157, 164, 189, 0.12);
+  flex-grow: 1;
+  margin: 0 6px;
+}
 /* ================ END SERVICES ================ */
 
 /* ================ ADVANTAGES ================ */
+.advantages .container {
+  display: flex;
+}
+
+.advantages-left-side {
+  display: flex;
+  padding-left: 100px;
+}
+
+.advantages-list:first-child {
+  margin-right: 30px;
+}
+
+.advantages-list:last-child {
+  margin-top: 35px;
+}
+
+.advantages-list-item {
+  width: 170px;
+  background-color: #f7f7f7;
+  text-align: center;
+  padding: 20px 21px;
+}
+
+.advantages-list-item:not(:last-child) {
+  margin-bottom: 30px;
+}
+
 .advantages-list-item-number {
   font-weight: 700;
   font-size: 42px;
@@ -181,15 +377,55 @@ button {
   line-height: 1.364;
   color: #303030;
 }
+
+.advantages-right-side {
+  padding-left: 130px;
+}
+
+.advantages-right-side .title {
+  margin-bottom: 20px;
+}
+
+.advantages-right-side .description {
+  padding-right: 100px;
+}
 /* ================ END ADVANTAGES ================ */
 
 /* ================ MASTERS ================ */
+.masters {
+  background-color: #f7f7f7;
+}
+.masters .title {
+  margin-bottom: 44px;
+}
+
+.masters-list {
+  display: flex;
+  /* justify-content: space-between; */
+}
+
+.masters-list-item {
+  width: calc((100% - 60px) / 3);
+  text-align: center;
+}
+
+.masters-list-item-footer {
+  padding-top: 30px;
+  padding-left: 82px;
+  padding-right: 82px;
+}
+
+.masters-list-item:not(:last-child) {
+  margin-right: 30px;
+}
+
 .masters-list-item-name {
   font-weight: normal;
   font-size: 18px;
   line-height: 1.389;
   letter-spacing: 0.02em;
   color: #303030;
+  margin-bottom: 8px;
 }
 
 .masters-list-item-position {
@@ -202,7 +438,14 @@ button {
 /* ================ END MASTERS ================ */
 
 /* ================ GALLERY ================ */
+.gallery .subtitle {
+  margin-bottom: 44px;
+}
 
+.gallery-list {
+  display: flex;
+  justify-content: space-between;
+}
 /* ================ END GALLERY ================ */
 
 /* ================ CONTACT FORM ================ */
@@ -221,6 +464,16 @@ button {
 /* ================ END CONTACT ================ */
 
 /* ================ FOOTER ================ */
+.footer {
+  padding-top: 56px;
+  padding-bottom: 56px;
+}
+.footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .copyright {
   font-weight: 600;
   font-size: 11px;
@@ -229,3 +482,11 @@ button {
   color: #9da4bd;
 }
 /* ================ END FOOTER ================ */
+
+/* 
+-0 + 3 = 3;
+-1 + 3 = 2;
+-2 + 3 = 1;
+*/
+
+/* :not(:nth-last-child(-n + 3)) */
