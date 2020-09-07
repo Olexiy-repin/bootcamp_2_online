@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+ul {
+  list-style: none;
+}
+
+img {
+  display: block;
+}
+
+.container {
+  width: 1170px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.team-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.team-list-item {
+  text-align: center;
+}
+
+.team-list-img-wrapper {
+  position: relative;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+.team-list-item-img {
+}
+
+.team-list-item-name {
+  margin-bottom: 5px;
+}
+
+.team-list-item-img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 32px;
+  background-color: rgba(85, 85, 85, 0.5);
+
+  transform: translateY(100%);
+  transition: all 500ms linear;
+  /* opacity: 0;
+  pointer-events: none; */
+}
+
+.team-list-item:hover .overlay {
+  transform: translateY(0);
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-list-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 28px;
+  height: 28px;
+}
+
+.social-list-link:hover {
+  background-color: rgb(192, 48, 28);
+}
