@@ -353,19 +353,31 @@
             </div>
         </section>
 
-        <div>
+        <div class="contact-wrapper">
             <!-- КОНТАКТНАЯ ФОРМА -->
-            <section></section>
+            <section class="section contact-form-section">
+                <div class="contact-form-wrapper">
+                    <h2 class="title title-dark-theme">Онлайн-запись</h2>
+                    <form action="#" class="contact-form">
+                        <input type="text" name="user-name" class="contact-form-input" required placeholder="Имя*"
+                            minlength="2">
+                        <input type="tel" name="user-phone" class="contact-form-input" required placeholder="Телефон*"
+                            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+                        <textarea name="user-message" class="contact-form-message" placeholder="Сообщение"></textarea>
+                        <button type="submit" class="contact-form-btn">отправить</button>
+                    </form>
+                </div>
+            </section>
 
             <!-- КОНТАКТЫ -->
-            <section class="contact">
+            <section class="section contact">
                 <h2 class="title title-dark-theme">Контакты</h2>
                 <ul class="list contact-list">
                     <li class="contact-list-item">
                         <address class="address">
                             <a class="link contact-list-link" href="https://goo.gl/maps/zMtT8BieKgNjo3TC7"
                                 target="_blank">ул.
-                                Васильковая, 7А
+                                Васильковая, 7А <br>
                                 Киев, 08132</a>
                         </address>
                     </li>
@@ -381,7 +393,7 @@
                         </address>
                     </li>
                 </ul>
-                <p class="subtitle">время работы</p>
+                <p class="subtitle subtitle-dark-theme">время работы</p>
                 <p class="contact-date">Ежедневно с 9:00 до 22:00</p>
             </section>
         </div>
@@ -402,6 +414,30 @@
     <div class="backdrop is-hidden" data-modal>
         <div class="modal">
             <button type="button" class="close-btn" data-modal-close>X</button>
+            <form action="" class="modal-form">
+
+                <div class="modal-form-field">
+                    <input type="text" name="user-name" id="user-name" class="modal-form-input">
+                    <label class="modal-form-input-label" for="user-name">Имя</label>
+                    <span class="modal-form-icon"></span>
+                </div>
+
+                <div class="modal-form-field">
+                    <input type="tel" name="user-phone" id="user-phone" class="modal-form-input">
+                    <label class="modal-form-input-label" for="user-phone">Телефон</label>
+                    <span class="modal-form-icon"></span>
+                </div>
+
+                <label for="user-message">Комментарий</label>
+                <textarea name="" name="user-message" id="user-message" class="modal-form-message"></textarea>
+
+                <input type="checkbox" name="user-policy" id="user-policy" class="modal-form-check visually-hidden">
+                <label for="user-policy" class="modal-form-label-check">
+                    <span>Соглашаюсь с рассылкой и принимаю <a href="#">Условия договора</a></span>
+                </label>
+
+                <button type="submit" class="modal-form-btn">Отправить</button>
+            </form>
         </div>
     </div>
 
