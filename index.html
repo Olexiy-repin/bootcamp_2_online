@@ -25,16 +25,16 @@
                 </a>
                 <ul class="list navigation-list">
                     <li class="navigation-list-item">
-                        <a class="link navigation-list-item-link" href="">О нас</a>
+                        <a class="link navigation-list-item-link" href="#about-us">О нас</a>
                     </li>
                     <li class="navigation-list-item">
-                        <a class="link navigation-list-item-link" href="">Услуги и цены</a>
+                        <a class="link navigation-list-item-link" href="#services">Услуги и цены</a>
                     </li>
                     <li class="navigation-list-item">
-                        <a class="link navigation-list-item-link" href="">Мастера</a>
+                        <a class="link navigation-list-item-link" href="#masters">Мастера</a>
                     </li>
                     <li class="navigation-list-item">
-                        <a class="link navigation-list-item-link" href="">Контакты</a>
+                        <a class="link navigation-list-item-link" href="#contact">Контакты</a>
                     </li>
                 </ul>
             </nav>
@@ -68,7 +68,7 @@
         </section>
 
         <!-- О НАС -->
-        <section class="section about">
+        <section class="section about" id="about-us">
             <div class="container">
                 <ul class="list about-gallery">
                     <li class="about-gallery-item">
@@ -96,7 +96,7 @@
         </section>
 
         <!-- УСЛУГИ И ЦЕНЫ -->
-        <section class="section services">
+        <section class="section services" id="services">
             <div class="container">
                 <p class="subtitle subtitle-dark-theme">Проведи время в компании лучших мастеров</p>
                 <h2 class="title title-dark-theme">Услуги и цены</h2>
@@ -191,7 +191,7 @@
         </section>
 
         <!-- НАШИ МАСТЕРА -->
-        <section class="section masters">
+        <section class="section masters" id="masters">
             <div class="container">
                 <p class="subtitle subtitle-light-theme">для настоящих ценителей атмосферы</p>
                 <h2 class="title title-light-theme">Наши мастера</h2>
@@ -370,10 +370,13 @@
             </section>
 
             <!-- КОНТАКТЫ -->
-            <section class="section contact">
+            <section class="section contact" id="contact">
                 <h2 class="title title-dark-theme">Контакты</h2>
                 <ul class="list contact-list">
                     <li class="contact-list-item">
+                        <svg class="contact-list-svg">
+                            <use href="./images/sprite.svg#map-pin"></use>
+                        </svg>
                         <address class="address">
                             <a class="link contact-list-link" href="https://goo.gl/maps/zMtT8BieKgNjo3TC7"
                                 target="_blank">ул.
@@ -382,11 +385,17 @@
                         </address>
                     </li>
                     <li class="contact-list-item">
+                        <svg class="contact-list-svg">
+                            <use href="./images/sprite.svg#phone"></use>
+                        </svg>
                         <address class="address">
                             <a class="link contact-list-link" href="tel:+380441111111">+38 044 111 11 11</a>
                         </address>
                     </li>
                     <li class="contact-list-item">
+                        <svg class="contact-list-svg">
+                            <use href="./images/sprite.svg#mail"></use>
+                        </svg>
                         <address class="address">
                             <a class="link contact-list-link"
                                 href="mailto:barbershop@email.com">barbershop@email.com</a>

@@ -12,6 +12,10 @@
   --accent-color: #ff6c00;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 *,
 *::before,
 *::after {
@@ -783,7 +787,6 @@ button {
   color: #fff;
 }
 
-/* 655 = 51.17% 625 = 48.83% */
 /* ================ END CONTACT FORM ================ */
 
 /* ================ CONTACT ================ */
@@ -804,8 +807,24 @@ button {
   margin-bottom: 70px;
 }
 
+.contact-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list-item:first-child .contact-list-svg {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
 .contact-list-item:not(:last-child) {
   margin-bottom: 20px;
+}
+
+.contact-list-svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
 }
 
 .contact-list-link,
