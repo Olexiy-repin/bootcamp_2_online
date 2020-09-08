@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Module 06</title>
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+
+<body>
+    <form action="#" class="contact-form">
+        <input type="text" class="contact-form-input" name="user-name" placeholder="Name*" required minlength="2">
+        <input type="email" class="contact-form-input" name="user-email" placeholder="Email*" required>
+        <input type="tel" class="contact-form-input" name="user-phone" placeholder="096-111-11-11*" required
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}">
+
+        <section class="form-section">
+            <h2 class="form-section-title">Your hobby</h2>
+
+            <input type="checkbox" name="user-hobby" value="football" class="contact-form-checkbox" id="hobby-football">
+            <label for="hobby-football">
+                football
+            </label>
+
+            <input type="checkbox" name="user-hobby" value="boxing" class="contact-form-checkbox" id="hobby-boxing"
+                checked>
+            <label for="hobby-boxing">
+                boxing
+            </label>
+
+            <input type="checkbox" name="user-hobby" value="swimming" class="contact-form-checkbox">
+            swimming
+        </section>
+
+        <section class="form-section">
+            <h2 class="form-section-title">Your Age</h2>
+            18
+            <input type="radio" name="user-age" value="18" class="contact-form-checkbox" checked>
+            25
+            <input type="radio" name="user-age" value="25" class="contact-form-checkbox">
+            35
+            <input type="radio" name="user-age" value="35" class="contact-form-checkbox">
+        </section>
+
+        <section class="form-section">
+            <h2 class="form-section-title">Your Message</h2>
+            <textarea class="contact-form-message" name="user-message" maxlength="60"
+                placeholder="Your message"></textarea>
+        </section>
+        <section class="form-section">
+            <h2 class="form-section-title">Your City</h2>
+            <select name="user-city" id="">
+                <option value="Kyiv">Kyiv</option>
+                <option value="Vinnitsa" selected>Vinnitsa</option>
+                <option value="Kharkiv">Kharkiv</option>
+            </select>
+        </section>
+        <button type="submit" class="contact-form-btn">submit</button>
+        <button type="reset" class="contact-form-btn">clear</button>
+    </form>
+</body>
+
+</html>
