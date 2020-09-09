@@ -1,8 +1,4 @@
 /* ================ ADVANTAGES ================ */
-.advantages .container {
-  display: flex;
-}
-
 .advantages-left-side {
   display: flex;
   padding-left: 100px;
@@ -21,10 +17,10 @@
   background-color: #f7f7f7;
   text-align: center;
   padding: 20px 21px;
-}
 
-.advantages-list-item:not(:last-child) {
-  margin-bottom: 30px;
+  &:not(:last-child) {
+    margin-bottom: 30px;
+  }
 }
 
 .advantages-list-item-number {
@@ -44,13 +40,5 @@
 
 .advantages-right-side {
   padding-left: 130px;
-}
-
-.advantages-right-side .title {
-  margin-bottom: 20px;
-}
-
-.advantages-right-side .description {
-  padding-right: 100px;
 }
 /* ================ END ADVANTAGES ================ */

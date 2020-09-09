@@ -8,10 +8,6 @@
   padding-left: 100px;
 }
 
-.contact .title {
-  margin-bottom: 40px;
-}
-
 .contact-list {
   margin-bottom: 70px;
 }
@@ -19,21 +15,21 @@
 .contact-list-item {
   display: flex;
   align-items: center;
-}
 
-.contact-list-item:first-child .contact-list-svg {
-  align-self: flex-start;
-  margin-top: 6px;
-}
-
-.contact-list-item:not(:last-child) {
-  margin-bottom: 20px;
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
 }
 
 .contact-list-svg {
   width: 24px;
   height: 24px;
   margin-right: 16px;
+
+  .contact-list-item:first-child & {
+    align-self: flex-start;
+    margin-top: 6px;
+  }
 }
 
 .contact-list-link,

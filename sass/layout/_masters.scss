@@ -2,28 +2,24 @@
 .masters {
   background-color: #f7f7f7;
 }
-.masters .title {
-  margin-bottom: 44px;
-}
 
 .masters-list {
   display: flex;
-  /* justify-content: space-between; */
 }
 
 .masters-list-item {
   width: calc((100% - 60px) / 3);
   text-align: center;
+
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
 
 .masters-list-item-footer {
   padding-top: 30px;
   padding-left: 82px;
   padding-right: 82px;
-}
-
-.masters-list-item:not(:last-child) {
-  margin-right: 30px;
 }
 
 .masters-list-item-name {
@@ -40,7 +36,7 @@
   font-size: 14px;
   line-height: 1.357;
   letter-spacing: 0.02em;
-  color: var(--accent-color);
+  color: $accent-color;
   margin-bottom: 30px;
 }
 
@@ -62,13 +58,13 @@
   background-color: #fff;
 }
 
-.social-list-item-link:hover .social-list-item-svg {
-  fill: var(--accent-color);
-}
-
 .social-list-item-svg {
   width: 20px;
   height: 20px;
   transition: fill 250ms linear;
+
+  .social-list-item-link:hover & {
+    fill: $accent-color;
+  }
 }
 /* ================ END MASTERS ================ */

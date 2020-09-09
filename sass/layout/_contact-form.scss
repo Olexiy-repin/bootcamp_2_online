@@ -11,10 +11,6 @@
   padding-right: 40px;
 }
 
-.contact-form-section .title {
-  margin-bottom: 40px;
-}
-
 .contact-form {
   width: 560px;
   display: flex;
@@ -34,41 +30,37 @@
   border: none;
   border-bottom: 1px solid rgba(157, 164, 189, 0.4);
   background-color: transparent;
-}
 
-.contact-form-input::placeholder,
-.contact-form-message::placeholder {
-  text-transform: uppercase;
-  color: rgba(157, 164, 189, 0.4);
-}
+  &:focus {
+    outline: none;
+    border-bottom-color: #fff;
 
-.contact-form-input:focus,
-.contact-form-message:focus {
-  outline: none;
-  border-bottom-color: #fff;
-}
+    &::placeholder {
+      color: #fff;
+    }
+  }
 
-.contact-form-input:focus::placeholder,
-.contact-form-message:focus::placeholder {
-  color: #fff;
-}
+  &::placeholder {
+    text-transform: uppercase;
+    color: rgba(157, 164, 189, 0.4);
+  }
 
-.contact-form-input:not(:placeholder-shown),
-.contact-form-message:not(:placeholder-shown) {
-  border-bottom-color: #fff;
-}
-
-.contact-form-input:required:focus:valid {
-  border-bottom-color: green;
-}
-
-.contact-form-input:required:focus:invalid {
-  border-bottom-color: red;
+  &:not(:placeholder-shown) {
+    border-bottom-color: #fff;
+  }
 }
 
 .contact-form-input {
   width: 270px;
   height: 24px;
+
+  &:required:focus:valid {
+    border-bottom-color: green;
+  }
+
+  &:required:focus:invalid {
+    border-bottom-color: red;
+  }
 }
 
 .contact-form-message {
@@ -78,7 +70,7 @@
 }
 
 .contact-form-btn {
-  font-family: var(--main-font);
+  font-family: $main-font;
   font-weight: 600;
   font-size: 12px;
   width: 160px;
@@ -91,12 +83,11 @@
   border: 1px solid #ff6c00;
   border-radius: 25px;
   transition: all 250ms linear;
-}
 
-.contact-form-btn:hover,
-.contact-form-btn:focus {
-  background-color: var(--accent-color);
-  color: #fff;
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: #fff;
+  }
 }
-
 /* ================ END CONTACT FORM ================ */

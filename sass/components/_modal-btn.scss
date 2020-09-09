@@ -1,5 +1,5 @@
 .modal-btn {
-  font-family: var(--main-font);
+  font-family: $main-font;
   font-weight: 600;
   font-size: 12px;
   width: 160px;
@@ -12,17 +12,22 @@
   border: 1px solid #ff6c00;
   border-radius: 25px;
   transition: all 250ms linear;
+
+  &:hover,
+  &:focus {
+    background-color: $accent-color;
+    color: #fff;
+  }
+
+  .services & {
+    display: block;
+    margin: 0 auto;
+  }
 }
 
 .modal-btn-light-theme {
-  color: var(--modal-btn-color-light-theme);
+  color: $modal-btn-color-light-theme;
 }
 .modal-btn-dark-theme {
-  color: var(--modal-btn-color-dark-theme);
-}
-
-.modal-btn:hover,
-.modal-btn:focus {
-  background-color: var(--accent-color);
-  color: #fff;
+  color: $modal-btn-color-dark-theme;
 }

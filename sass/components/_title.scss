@@ -1,15 +1,30 @@
 .title {
-  font-family: var(--main-font);
+  font-family: $main-font;
   font-weight: bold;
-  font-size: var(--title-font-size);
+  font-size: $title-font-size;
   line-height: 1.167;
   letter-spacing: 0.05em;
+
+  .about-right-side &,
+  .advantages-right-side & {
+    margin-bottom: 20px;
+  }
+
+  .contact &,
+  .contact-form-section & {
+    margin-bottom: 40px;
+  }
+
+  .masters &,
+  .services & {
+    margin-bottom: 44px;
+  }
 }
 
 .title-dark-theme {
-  color: var(--title-color-dark-theme);
+  color: $title-color-dark-theme;
 }
 
 .title-light-theme {
-  color: var(--title-color-light-theme);
+  color: $title-color-light-theme;
 }

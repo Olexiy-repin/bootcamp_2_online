@@ -12,19 +12,6 @@
   background-size: 1125px 680px;
 }
 
-.hero .social-links {
-  transform: rotate(-90deg);
-  transform-origin: left;
-}
-
-.hero .container {
-  display: flex;
-}
-
-.hero .description {
-  width: 400px;
-}
-
 .hero-left-side {
   width: 100px;
   display: flex;
@@ -41,12 +28,12 @@
 }
 
 .hero-title {
-  font-family: var(--secondary-font);
+  font-family: $secondary-font;
   font-weight: 700;
   font-size: 72px;
   line-height: 1.181;
   letter-spacing: 0.05em;
-  color: var(--title-color-dark-theme);
+  color: $title-color-dark-theme;
   margin-bottom: 20px;
 }
 /* ========= END HERO ========= */

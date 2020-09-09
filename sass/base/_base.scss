@@ -14,8 +14,8 @@ img {
 }
 
 body {
-  font-family: var(--main-font);
-  color: var(--text-color-light-theme);
+  font-family: $main-font;
+  color: $text-color-light-theme;
 }
 
 .link {

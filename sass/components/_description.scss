@@ -1,14 +1,26 @@
 .description {
   font-weight: normal;
-  font-size: var(--text-font-size);
+  font-size: $text-font-size;
   line-height: 1.667;
   letter-spacing: 0.02em;
+
+  .about-right-side & {
+    margin-bottom: 20px;
+  }
+
+  .advantages-right-side & {
+    padding-right: 100px;
+  }
+
+  .hero & {
+    width: 400px;
+  }
 }
 
 .description-dark-theme {
-  color: var(--text-color-dark-theme);
+  color: $text-color-dark-theme;
 }
 
 .description-light-theme {
-  color: var(--text-color-light-theme);
+  color: $text-color-light-theme;
 }

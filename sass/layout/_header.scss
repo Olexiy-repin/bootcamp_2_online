@@ -8,11 +8,6 @@
   padding-bottom: 32px;
 }
 
-.header .container {
-  display: flex;
-  align-items: center;
-}
-
 .header .address {
   margin-left: auto;
   margin-right: 40px;
@@ -25,7 +20,6 @@
 
 .logo {
   animation-duration: 1000ms;
-  /* animation-iteration-count: infinite; */
   margin-right: 71px;
 }
 
@@ -45,12 +39,10 @@
   letter-spacing: 0.1em;
   color: #fff;
   transition: color 250ms linear;
-}
 
-.navigation-list-item-link:hover,
-.navigation-list-item-link:focus,
-.header-tel-link:hover,
-.header-tel-link:focus {
-  color: var(--accent-color);
+  &:hover,
+  &:focus {
+    color: $accent-color;
+  }
 }
 /* ========= END HEADER ========= */
