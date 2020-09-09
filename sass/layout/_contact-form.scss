@@ -1,0 +1,102 @@
+/* ================ CONTACT FORM ================ */
+.contact-wrapper {
+  display: flex;
+  background-color: #191c26;
+}
+
+.contact-form-section {
+  width: 51.17%;
+  display: flex;
+  justify-content: flex-end;
+  padding-right: 40px;
+}
+
+.contact-form-section .title {
+  margin-bottom: 40px;
+}
+
+.contact-form {
+  width: 560px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.contact-form-input,
+.contact-form-message {
+  font-family: " Open Sans", sans-serif;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+  color: #fff;
+  margin-bottom: 44px;
+  border: none;
+  border-bottom: 1px solid rgba(157, 164, 189, 0.4);
+  background-color: transparent;
+}
+
+.contact-form-input::placeholder,
+.contact-form-message::placeholder {
+  text-transform: uppercase;
+  color: rgba(157, 164, 189, 0.4);
+}
+
+.contact-form-input:focus,
+.contact-form-message:focus {
+  outline: none;
+  border-bottom-color: #fff;
+}
+
+.contact-form-input:focus::placeholder,
+.contact-form-message:focus::placeholder {
+  color: #fff;
+}
+
+.contact-form-input:not(:placeholder-shown),
+.contact-form-message:not(:placeholder-shown) {
+  border-bottom-color: #fff;
+}
+
+.contact-form-input:required:focus:valid {
+  border-bottom-color: green;
+}
+
+.contact-form-input:required:focus:invalid {
+  border-bottom-color: red;
+}
+
+.contact-form-input {
+  width: 270px;
+  height: 24px;
+}
+
+.contact-form-message {
+  width: 100%;
+  height: 76px;
+  resize: none;
+}
+
+.contact-form-btn {
+  font-family: var(--main-font);
+  font-weight: 600;
+  font-size: 12px;
+  width: 160px;
+  min-height: 40px;
+  padding: 12px 14px;
+  line-height: 1.333;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #fff;
+  border: 1px solid #ff6c00;
+  border-radius: 25px;
+  transition: all 250ms linear;
+}
+
+.contact-form-btn:hover,
+.contact-form-btn:focus {
+  background-color: var(--accent-color);
+  color: #fff;
+}
+
+/* ================ END CONTACT FORM ================ */

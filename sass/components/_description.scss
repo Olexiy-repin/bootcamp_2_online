@@ -1,0 +1,14 @@
+.description {
+  font-weight: normal;
+  font-size: var(--text-font-size);
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+}
+
+.description-dark-theme {
+  color: var(--text-color-dark-theme);
+}
+
+.description-light-theme {
+  color: var(--text-color-light-theme);
+}

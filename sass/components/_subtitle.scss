@@ -1,0 +1,33 @@
+.subtitle {
+  display: flex;
+  align-items: center;
+  font-weight: 600;
+  font-size: 11px;
+  line-height: 1.364;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.subtitle::before {
+  content: "";
+  width: 60px;
+  height: 1px;
+  margin-right: 20px;
+}
+
+.subtitle-dark-theme {
+  color: var(--text-color-dark-theme);
+}
+
+.subtitle-dark-theme::before {
+  background-color: var(--text-color-dark-theme);
+}
+
+.subtitle-light-theme {
+  color: var(--text-color-light-theme);
+}
+
+.subtitle-light-theme::before {
+  background-color: var(--text-color-light-theme);
+}

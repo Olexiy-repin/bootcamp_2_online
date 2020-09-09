@@ -1,0 +1,47 @@
+/* ================ CONTACT ================ */
+.contact {
+  width: 48.83%;
+  background-image: url("../images/contact/bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: left bottom;
+  padding-left: 100px;
+}
+
+.contact .title {
+  margin-bottom: 40px;
+}
+
+.contact-list {
+  margin-bottom: 70px;
+}
+
+.contact-list-item {
+  display: flex;
+  align-items: center;
+}
+
+.contact-list-item:first-child .contact-list-svg {
+  align-self: flex-start;
+  margin-top: 6px;
+}
+
+.contact-list-item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.contact-list-svg {
+  width: 24px;
+  height: 24px;
+  margin-right: 16px;
+}
+
+.contact-list-link,
+.contact-date {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 1.667;
+  letter-spacing: 0.02em;
+  color: #9da4bd;
+}
+/* ================ END CONTACT ================ */

@@ -1,0 +1,34 @@
+/* ================ ABOUT ================ */
+.about .container {
+  display: flex;
+}
+
+.about-gallery {
+  display: flex;
+}
+
+.about-gallery-item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.about-right-side {
+  padding-left: 64px;
+}
+
+.about-right-side .title {
+  margin-bottom: 20px;
+}
+
+.about-right-side .description {
+  margin-bottom: 20px;
+}
+
+.about-text {
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 1.857;
+  letter-spacing: 0.02em;
+  margin-bottom: 40px;
+  padding-right: 56px;
+}
+/* ================ END ABOUT ================ */
