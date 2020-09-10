@@ -469,8 +469,8 @@ button {
 }
 
 .about-text {
-  font-weight: normal;
   font-size: 14px;
+  font-weight: 400;
   line-height: 1.857;
   letter-spacing: 0.02em;
   margin-bottom: 40px;

@@ -12,9 +12,7 @@
 }
 
 .about-text {
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 1.857;
+  @include font(14px, 400, 1.857);
   letter-spacing: 0.02em;
   margin-bottom: 40px;
   padding-right: 56px;
