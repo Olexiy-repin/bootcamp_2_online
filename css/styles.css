@@ -21,16 +21,69 @@ ol {
   list-style: none;
 }
 
-/* body {
+body {
   background-color: teal;
-} */
+}
 
 /* ========== MIN-WIDTH MAX-WIDTH ========== */
+/* Когда ширина вьюпорта будет 400px или больше, применить правила внутри */
+/* @media (min-width: 400px) {
+  body {
+    background-color: tomato;
+  }
+} */
+
+/* Когда ширина вьюпорта будет 600px или больше, применить правила внутри */
+/* @media (min-width: 600px) {
+  body {
+    background-color: saddlebrown;
+  }
+} */
+
+/* Когда ширина вьюпорта от 320px и до 767px(включительно), применять правила внутри */
+/* @media (max-width: 767px) {
+  body {
+    background-color: aqua;
+  }
+} */
+
+/* Когда ширина вьюпорта от 320px и до 500px(включительно), применять правила внутри */
+/* @media (max-width: 500px) {
+  body {
+    background-color: salmon;
+  }
+} */
 
 /* ========== AND ========== */
+/* Когда ширина вьюпорта будет между 768px и 1199px(включительно) применить правила внутри */
+/* @media (min-width: 768px) and (max-width: 1199px) {
+  body {
+    background-color: wheat;
+  }
+} */
 
 /* ========== OR ========== */
-
+/* @media (max-width: 767px), (min-width: 1200px) {
+  body {
+    background-color: khaki;
+  }
+} */
 /* ========== TYPES ========== */
+/* 
+  all
+  screen 
+  print
+*/
 
 /* ========== ORIENTATION ========== */
+/* @media screen and (orientation: portrait) {
+  body {
+    background-color: lightblue;
+  }
+} */
+
+/* @media screen and (orientation: landscape) and (min-width: 480px) and (max-width: 767px) {
+  body {
+    background-color: lawngreen;
+  }
+} */
