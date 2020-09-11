@@ -1,10 +1,9 @@
 .modal-btn {
+  width: 194px;
+  height: 40px;
   font-family: $main-font;
   font-weight: 600;
   font-size: 12px;
-  width: 160px;
-  min-height: 40px;
-  padding: 12px 14px;
   line-height: 1.333;
   letter-spacing: 0.1em;
   text-transform: uppercase;
@@ -18,16 +17,54 @@
     background-color: $accent-color;
     color: #fff;
   }
+}
 
-  .services & {
-    display: block;
-    margin: 0 auto;
+@media screen and (max-width: 767px) {
+  .header-utils .modal-btn {
+    color: $modal-btn-color-light-theme;
   }
 }
 
-.modal-btn-light-theme {
-  color: $modal-btn-color-light-theme;
+@media screen and (min-width: 768px) {
+  .modal-btn {
+    width: 160px;
+    padding: 12px 14px;
+
+    .header & {
+      margin-bottom: 20px;
+    }
+  }
 }
-.modal-btn-dark-theme {
-  color: $modal-btn-color-dark-theme;
-}
+
+// .modal-btn {
+//   font-family: $main-font;
+//   font-weight: 600;
+//   font-size: 12px;
+//
+//   padding: 12px 14px;
+//   line-height: 1.333;
+//   letter-spacing: 0.1em;
+//   text-transform: uppercase;
+//   color: #fff;
+//   border: 1px solid #ff6c00;
+//   border-radius: 25px;
+//   transition: all 250ms linear;
+
+//   &:hover,
+//   &:focus {
+//     background-color: $accent-color;
+//     color: #fff;
+//   }
+
+//   .services & {
+//     display: block;
+//     margin: 0 auto;
+//   }
+// }
+
+// .modal-btn-light-theme {
+//   color: $modal-btn-color-light-theme;
+// }
+// .modal-btn-dark-theme {
+//   color: $modal-btn-color-dark-theme;
+// }

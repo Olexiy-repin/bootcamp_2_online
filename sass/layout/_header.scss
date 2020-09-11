@@ -1,48 +1,221 @@
 /* ========= HEADER ========= */
+// .header {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   width: 100%;
+//   padding-top: 32px;
+//   padding-bottom: 32px;
+// }
+
+// .header .address {
+//   margin-left: auto;
+//   margin-right: 40px;
+// }
+
+// .navigation {
+//   display: flex;
+//   align-items: center;
+// }
+
+// .logo {
+//   animation-duration: 1000ms;
+//   margin-right: 71px;
+// }
+
+// .navigation-list {
+//   display: flex;
+// }
+
+// .navigation-list-item:not(:last-child) {
+//   margin-right: 40px;
+// }
+
+// .navigation-list-item-link,
+// .header-tel-link {
+//   font-weight: 600;
+//   font-size: 12px;
+//   line-height: 1.333;
+//   letter-spacing: 0.1em;
+//   color: #fff;
+//   transition: color 250ms linear;
+
+//   &:hover,
+//   &:focus {
+//     color: $accent-color;
+//   }
+// }
+/* ========= END HEADER ========= */
 .header {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  padding-top: 32px;
-  padding-bottom: 32px;
-}
-
-.header .address {
-  margin-left: auto;
-  margin-right: 40px;
-}
-
-.navigation {
-  display: flex;
-  align-items: center;
-}
-
-.logo {
-  animation-duration: 1000ms;
-  margin-right: 71px;
-}
-
-.navigation-list {
-  display: flex;
-}
-
-.navigation-list-item:not(:last-child) {
-  margin-right: 40px;
+  padding: 40px 0;
+  background-color: #333;
 }
 
 .navigation-list-item-link,
 .header-tel-link {
   font-weight: 600;
-  font-size: 12px;
-  line-height: 1.333;
+  font-size: 18px;
+  line-height: 1.389;
   letter-spacing: 0.1em;
-  color: #fff;
-  transition: color 250ms linear;
+  color: #303030;
 
   &:hover,
   &:focus {
     color: $accent-color;
   }
 }
-/* ========= END HEADER ========= */
+
+@media screen and (max-width: 767px) {
+  .header {
+    position: relative;
+
+    .logo-img {
+      fill: #fff;
+    }
+  }
+
+  .burger-btn {
+    position: relative;
+    z-index: 1;
+    background-color: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+  }
+
+  .close-menu-icon {
+    display: none;
+  }
+
+  .burger-btn.is-open .open-menu-icon {
+    display: none;
+  }
+
+  .burger-btn.is-open .close-menu-icon {
+    display: block;
+  }
+
+  .header-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 337px;
+    height: 796px;
+    padding-top: 118px;
+    padding-bottom: 118px;
+    padding-left: 40px;
+    padding-right: 104px;
+    background-color: #ffffff;
+    box-shadow: -4px 0px 8px rgba(0, 0, 0, 0.04),
+      -2px 0px 4px rgba(0, 0, 0, 0.08), -1px 0px 3px rgba(0, 0, 0, 0.16);
+
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+    transition: all 500ms linear;
+
+    &.is-open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: unset;
+    }
+  }
+
+  .navigation-list-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+
+  .header-utils {
+    margin-bottom: 64px;
+
+    .address {
+      margin-bottom: 24px;
+    }
+  }
+
+  .header-social-list-item {
+    padding-left: 100px;
+
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+
+    &:first-child {
+      position: relative;
+      &::before {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        display: block;
+        content: "";
+        width: 60px;
+        height: 1px;
+        background-color: #303030;
+      }
+    }
+  }
+
+  .header-social-list-link {
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 1.357;
+    letter-spacing: 0.2em;
+    color: #303030;
+  }
+
+  .navigation {
+    margin-bottom: 64px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .burger-btn {
+    display: none;
+  }
+
+  .header-social-list {
+    display: none;
+  }
+
+  .header .container {
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+
+  .header .logo {
+    margin-right: 64px;
+  }
+
+  .header-menu {
+    display: flex;
+    align-items: flex-start;
+  }
+
+  .header-utils {
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .navigation {
+    margin-right: 47px;
+    margin-top: 18px;
+  }
+
+  .navigation-list {
+    display: flex;
+  }
+
+  .navigation-list-item:not(:last-child) {
+    margin-right: 24px;
+  }
+
+  .navigation-list-item-link,
+  .header-tel-link {
+    font-size: 12px;
+    line-height: 1.333;
+    color: #fff;
+  }
+}
